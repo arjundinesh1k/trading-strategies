@@ -17,5 +17,10 @@
 *   **Authors:** Gatev, Goetzmann, & Rouwenhorst
 *   **Key Takeaway:** Historical proof that mean-reversion between "twin" stocks (like KO and PEP) can generate consistent profit, proving the market isn't always perfectly efficient.
 
-### Paper #3: [Reserved for later]
-### Paper #4: [Reserved for later]
+### Paper #3: Statistical Arbitrage in the U.S. Equities Market
+*   **Authors:** Marco Avellaneda and Jeong-Hyun Lee
+*   **Key Takeaway:** Research on how using math to find "mean-reverting" patterns in the US market made money, especially by grouping stocks together.
+
+### Paper #4: Returns to Buying Winners and Selling Losers
+*   **Authors:** Narasimhan Jegadeesh and Sheridan Titman
+*   **Key Takeaway:** Proves that stocks on a "winning streak" tend to keep winning for 3-12 months, a concept known as momentum.
