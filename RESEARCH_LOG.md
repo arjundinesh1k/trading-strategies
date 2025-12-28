@@ -1,9 +1,9 @@
 # Quant Research Log
 
-**Name:** Arjun Dinesh
-**Focus:** Computational Finance
-**Grade:** 9
-**Location:** Houston Area, TX
+*  **Name:** Arjun Dinesh
+*  **Focus:** Computational Finance
+*  **Grade:** 9
+*  **Location:** Houston Area, TX
 
 ---
 
