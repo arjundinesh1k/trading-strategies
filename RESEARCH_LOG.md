@@ -24,3 +24,9 @@
 ### Paper #4: Returns to Buying Winners and Selling Losers
 *   **Authors:** Narasimhan Jegadeesh and Sheridan Titman
 *   **Key Takeaway:** Proves that stocks on a "winning streak" tend to keep winning for 3-12 months, a concept known as momentum.
+
+---
+
+**Data Audit (Dec 28, 2025):**
+Performed a ratio check on KO/PEP. Discovered a significant drift from 0.34 (2021) to 0.48 (2025).
+Lesson Learned: A static ratio strategy is vulnerable to "structural breaks." For Strategy #1 to work, I need to implement a Rolling Mean (looking at the last 20-60 days) rather than a fixed historical average.
