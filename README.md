@@ -46,5 +46,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ## 📫 Contact
-**[Your Name]**  
+**Arjun Dinesh** 
+**Email: arjun.dinesh.1k@gmail.com**
 *Aspiring Quant & Researcher | Fulshear High School '29*
