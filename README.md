@@ -16,10 +16,12 @@ This repository serves as a professional portfolio and research log for my journ
 
 ## 📈 Active Strategies
 
-### Strategy #1: Pairs Trading (Mean Reversion)
+### Strategy #1: Statistical Arbitrage (Mean Reversion)
 *   **Assets:** KO (Coca-Cola) / PEP (PepsiCo)
-*   **Concept:** Utilizing the Engle-Granger two-step cointegration method to identify price divergences in highly correlated equity pairs.
-*   **Status:** Initial logic built; pending rigorous backtest validation and Sharpe ratio optimization.
+*   **Status:** ✅ VERIFIED
+*   **Methodology:** 30-day rolling Z-score model.
+*   **Research Finding:** Analyzed 500 trading days; identified 39 buy signals (Z < -2) and 21 sell signals (Z > 2). This confirms that even with long-term ratio drift, short-term statistical anomalies remain tradable.
+*   **Files:** `statarb_ko_pep.py`, `pair_data.csv`, `statarb_signals.png`
 
 ### Strategy #2: Time-Series Momentum
 *   **Assets:** NVDA / AMD
