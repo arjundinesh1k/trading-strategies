@@ -33,3 +33,8 @@ Performed a ratio check on KO/PEP. Discovered a significant drift from 0.34 (202
 Lesson Learned: A static ratio strategy is vulnerable to "structural breaks." For Strategy #1 to work, I need to implement a Rolling Mean (looking at the last 20-60 days) rather than a fixed historical average.
 
 Verified Strategy #2 using real-time Yahoo Finance data. Discovered that NVDA had ~36% more momentum days than AMD over the last 24 months, validating the dual-EMA crossover model for high-growth tech equities.
+
+**Dec 29, 2025 Audit:**
+Connected Strategy #1 (StatArb) to Geometry's Distance Formula. Realized Z-score is a measure of "Price Displacement."
+
+Connected Strategy #2 (Momentum) to Physics' Kinematics. Realized momentum is the "Velocity" of a price trend.
