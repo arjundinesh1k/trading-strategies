@@ -18,17 +18,20 @@ This repository serves as a professional portfolio and research log for my journ
 
 ### Strategy #1: Statistical Arbitrage (Mean Reversion)
 *   **Assets:** KO (Coca-Cola) / PEP (PepsiCo)
-*   **Status:** ✅ VERIFIED
+*   **Status:** ✅ VERIFIED & BACKTESTED
 *   **Methodology:** 30-day rolling Z-score model.
-*   **Research Finding:** Analyzed 500 trading days; identified 39 buy signals (Z < -2) and 21 sell signals (Z > 2). This confirms that even with long-term ratio drift, short-term statistical anomalies remain tradable.
-*   **Files:** `statarb_ko_pep.py`, `pair_data.csv`, `statarb_signals.png`
+*   **Performance Metrics (Audit Dec 29, 2025):** 
+    *   **Annualized Sharpe Ratio:** 0.42 
+    *   **Win Rate:** 49.18%
+    *   **Daily Standard Deviation:** 0.0062
+*   **Analysis:** The strategy is currently "low-alpha." While profitable, the low win rate is attributed to the long-term "Ratio Drift" (0.34 to 0.48) identified during Phase 1 exploration. 
+*   **Next Steps:** Implement cointegration testing (ADF Test) and optimize entry/exit thresholds to improve the Signal-to-Noise ratio.
 
 ### Strategy #2: Momentum Trend Following
 *   **Assets:** NVDA / AMD
-*   **Status:** ✅ VERIFIED
-*   **Methodology:** Dual-EMA Crossover (9/21) with a Relative Strength Index (RSI > 50) filter.
-*   **Research Finding:** Over a 2-year lookback, NVDA exhibited 318 days of confirmed momentum, compared to 233 days for AMD. This quantifies NVDA's superior trend persistence during the AI expansion.
-*   **Files:** `momentum_nvda_amd.py`, `momentum_signals.png`
+*   **Status:** ✅ LOGIC VERIFIED
+*   **Methodology:** Dual-EMA Crossover (9-day/21-day) with a Relative Strength Index (RSI > 50) confirmation filter.
+*   **Research Finding:** NVDA exhibited 318 days of confirmed momentum over a 24-month lookback, outperforming AMD (233 days), validating the sector-lead hypothesis.
 
 ---
 

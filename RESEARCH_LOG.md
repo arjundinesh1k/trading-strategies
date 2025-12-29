@@ -9,6 +9,13 @@
 
 ## Phase 1: Exploration (Dec 2025 - Feb 2026)
 
+### Strategy #1 Performance Audit
+*   **Task:** Calculated Sharpe Ratio and Win Rate for KO/PEP StatArb.
+*   **Result:** 0.42 Sharpe. 
+*   **Academic Connection (Physics/Geometry):**
+    *   **Geometry:** Connected the Z-Score to the **Distance Formula**. Calculating the "gap" between prices is mathematically identical to finding the distance between two points on a coordinate plane.
+    *   **Physics:** Realized the Sharpe Ratio is a **Signal-to-Noise** calculation. Average return is the signal; Standard Deviation is the "vibration" or noise.
+
 ### Paper #1: What Happened to the Quants in August 2007?
 *   **Authors:** Khandani & Lo
 *   **Key Takeaway:** Even robust math models can fail during "liquidity crunches" when too many funds try to sell the same assets at once. This highlights the importance of "Systemic Risk."
@@ -24,6 +31,14 @@
 ### Paper #4: Returns to Buying Winners and Selling Losers
 *   **Authors:** Narasimhan Jegadeesh and Sheridan Titman
 *   **Key Takeaway:** Proves that stocks on a "winning streak" tend to keep winning for 3-12 months, a concept known as momentum.
+
+### Paper #5: A Five-Factor Asset Pricing Model
+*   **Authors:** Fama & French
+*   **Key Takeaway:** Learned that market returns are driven by specific "Factors" (Size, Value, Profitability, Investment, and Market Risk). This provides a roadmap for building more complex alphas in WorldQuant BRAIN.
+
+### Paper #6: Deep Neural Networks for Stock Price Prediction
+*   **Authors:** J.B. Heaton, et al.
+*   **Key Takeaway:** Explored how AI and Deep Learning can identify non-linear patterns that traditional linear models (like my current Z-score) might miss. This is a potential solution for predicting "Ratio Drift."
 
 ---
 
