@@ -28,5 +28,8 @@
 ---
 
 **Data Audit (Dec 28, 2025):**
+
 Performed a ratio check on KO/PEP. Discovered a significant drift from 0.34 (2021) to 0.48 (2025).
 Lesson Learned: A static ratio strategy is vulnerable to "structural breaks." For Strategy #1 to work, I need to implement a Rolling Mean (looking at the last 20-60 days) rather than a fixed historical average.
+
+Verified Strategy #2 using real-time Yahoo Finance data. Discovered that NVDA had ~36% more momentum days than AMD over the last 24 months, validating the dual-EMA crossover model for high-growth tech equities.

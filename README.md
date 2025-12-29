@@ -23,10 +23,12 @@ This repository serves as a professional portfolio and research log for my journ
 *   **Research Finding:** Analyzed 500 trading days; identified 39 buy signals (Z < -2) and 21 sell signals (Z > 2). This confirms that even with long-term ratio drift, short-term statistical anomalies remain tradable.
 *   **Files:** `statarb_ko_pep.py`, `pair_data.csv`, `statarb_signals.png`
 
-### Strategy #2: Time-Series Momentum
+### Strategy #2: Momentum Trend Following
 *   **Assets:** NVDA / AMD
-*   **Concept:** Capturing trend persistence in the semiconductor sector using moving average crossovers and RSI filters.
-*   **Status:** Phase 1 implementation complete.
+*   **Status:** ✅ VERIFIED
+*   **Methodology:** Dual-EMA Crossover (9/21) with a Relative Strength Index (RSI > 50) filter.
+*   **Research Finding:** Over a 2-year lookback, NVDA exhibited 318 days of confirmed momentum, compared to 233 days for AMD. This quantifies NVDA's superior trend persistence during the AI expansion.
+*   **Files:** `momentum_nvda_amd.py`, `momentum_signals.png`
 
 ---
 
