@@ -27,11 +27,13 @@ This repository serves as a professional portfolio and research log for my journ
 *   **Analysis:** The strategy is currently "low-alpha." While profitable, the low win rate is attributed to the long-term "Ratio Drift" (0.34 to 0.48) identified during Phase 1 exploration. 
 *   **Next Steps:** Implement cointegration testing (ADF Test) and optimize entry/exit thresholds to improve the Signal-to-Noise ratio.
 
-### Strategy #2: Momentum Trend Following
-*   **Assets:** NVDA / AMD
-*   **Status:** ✅ LOGIC VERIFIED
-*   **Methodology:** Dual-EMA Crossover (9-day/21-day) with a Relative Strength Index (RSI > 50) confirmation filter.
-*   **Research Finding:** NVDA exhibited 318 days of confirmed momentum over a 24-month lookback, outperforming AMD (233 days), validating the sector-lead hypothesis.
+### Strategy #2: Momentum Trend Following (NVDA/AMD)
+*   **Status:** ✅ BACKTESTED & VERIFIED
+*   **Performance Metrics (Audit Dec 30, 2025):** 
+    *   **NVDA Sharpe Ratio:** 0.95 (High Performance)
+    *   **NVDA Total Return:** 74.14%
+    *   **NVDA Max Drawdown:** -47.67% (Significant Risk)
+*   **Analysis:** The Dual-EMA model excels at capturing the "AI Expansion" trend. However, the high drawdown suggests the need for a "Stop-Loss" mechanism or a volatility-adjusting position size to protect capital during sector rotations.
 
 ---
 

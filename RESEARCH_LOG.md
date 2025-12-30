@@ -1,57 +1,57 @@
-# Quant Research Log
+# Quantitative Research & Literature Review
 
-*  **Name:** Arjun Dinesh
-*  **Focus:** Computational Finance
-*  **Grade:** 9
-*  **Location:** Houston Area, TX
-
----
-
-## Phase 1: Exploration (Dec 2025 - Feb 2026)
-
-### Strategy #1 Performance Audit
-*   **Task:** Calculated Sharpe Ratio and Win Rate for KO/PEP StatArb.
-*   **Result:** 0.42 Sharpe. 
-*   **Academic Connection (Physics/Geometry):**
-    *   **Geometry:** Connected the Z-Score to the **Distance Formula**. Calculating the "gap" between prices is mathematically identical to finding the distance between two points on a coordinate plane.
-    *   **Physics:** Realized the Sharpe Ratio is a **Signal-to-Noise** calculation. Average return is the signal; Standard Deviation is the "vibration" or noise.
-
-### Paper #1: What Happened to the Quants in August 2007?
-*   **Authors:** Khandani & Lo
-*   **Key Takeaway:** Even robust math models can fail during "liquidity crunches" when too many funds try to sell the same assets at once. This highlights the importance of "Systemic Risk."
-
-### Paper #2: Pairs Trading: Performance of a Relative-Value Arbitrage Rule
-*   **Authors:** Gatev, Goetzmann, & Rouwenhorst
-*   **Key Takeaway:** Historical proof that mean-reversion between "twin" stocks (like KO and PEP) can generate consistent profit, proving the market isn't always perfectly efficient.
-
-### Paper #3: Statistical Arbitrage in the U.S. Equities Market
-*   **Authors:** Marco Avellaneda and Jeong-Hyun Lee
-*   **Key Takeaway:** Research on how using math to find "mean-reverting" patterns in the US market made money, especially by grouping stocks together.
-
-### Paper #4: Returns to Buying Winners and Selling Losers
-*   **Authors:** Narasimhan Jegadeesh and Sheridan Titman
-*   **Key Takeaway:** Proves that stocks on a "winning streak" tend to keep winning for 3-12 months, a concept known as momentum.
-
-### Paper #5: A Five-Factor Asset Pricing Model
-*   **Authors:** Fama & French
-*   **Key Takeaway:** Learned that market returns are driven by specific "Factors" (Size, Value, Profitability, Investment, and Market Risk). This provides a roadmap for building more complex alphas in WorldQuant BRAIN.
-
-### Paper #6: Deep Neural Networks for Stock Price Prediction
-*   **Authors:** J.B. Heaton, et al.
-*   **Key Takeaway:** Explored how AI and Deep Learning can identify non-linear patterns that traditional linear models (like my current Z-score) might miss. This is a potential solution for predicting "Ratio Drift."
+*   **Researcher:** Arjun Dinesh
+*   **Institution:** Fulshear High School
+*   **Focus:** Computational Finance & Statistical Arbitrage
+*   **Timeline:** Grade 9 | Phase 1 (Dec 2025 - Feb 2026)
 
 ---
 
-**Data Audit (Dec 28, 2025):**
+## 🔬 Strategy Methodology & Performance Audits
 
-*   Performed a ratio check on KO/PEP. Discovered a significant drift from 0.34 (2021) to 0.48 (2025).
-*   Lesson Learned: A static ratio strategy is vulnerable to "structural breaks." For Strategy #1 to work, I need to implement a Rolling Mean (looking at the last 20-60 days) rather than a fixed historical average.
+### Strategy #1: Statistical Arbitrage (Pairs Trading)
+*   **Methodology:** Implemented a rolling 30-day Z-Score model to analyze the price ratio between KO and PEP. 
+*   **Backtest Metrics:** 
+    *   **Annualized Sharpe Ratio:** 0.42
+    *   **Win Rate:** 49.18%
+*   **Key Finding (The Drift):** Identified a structural break in the historical price ratio, drifting from 0.34 (2021) to 0.48 (2025). This confirms that price relationships are **non-stationary**, requiring an adaptive rolling-window approach to maintain a tradable signal.
+*   **Academic Intersection:** 
+    *   **Geometry:** Analyzed price divergence as a **Coordinate Distance** problem.
+    *   **Physics:** Evaluated the Sharpe Ratio as a **Signal-to-Noise Ratio (SNR)**; optimizing for higher signal density relative to market volatility.
 
-*   Verified Strategy #2 using real-time Yahoo Finance data. Discovered that NVDA had ~36% more momentum days than AMD over the last 24 months, validating the dual-EMA crossover model for high-growth tech equities.
+### Strategy #2: Time-Series Momentum (Trend Persistence)
+*   **Methodology:** Developed a dual-factor model utilizing Exponential Moving Average (EMA) crossovers (9/21 day) and Relative Strength Index (RSI) filters (> 50).
+*   **Backtest Metrics (NVDA):**
+    *   **Annualized Sharpe Ratio:** 0.95
+    *   **Max Drawdown:** -47.67%
+*   **Key Finding:** Confirmed high **Trend Persistence** in semiconductor equities. While the Sharpe Ratio is superior to Strategy #1, the significant **Max Drawdown** indicates substantial tail risk, requiring advanced risk management (e.g., stop-losses or volatility scaling).
+*   **Academic Intersection:** 
+    *   **Physics:** Modeled momentum as **Price Velocity** and used EMA crossovers as a proxy for **Acceleration**.
 
+---
 
-**Dec 29, 2025 Audit:**
+## 📚 Literature Review (Papers 1-8)
 
-*   Connected Strategy #1 (StatArb) to Geometry's Distance Formula. Realized Z-score is a measure of "Price Displacement."
+### Paper #1: What Happened to the Quants in August 2007? (Khandani & Lo)
+*   **Summary:** Analysis of the "Quant Meltdown." Highlights how systemic liquidity shocks can cause simultaneous failures in independent mathematical models.
 
-*   Connected Strategy #2 (Momentum) to Physics' Kinematics. Realized momentum is the "Velocity" of a price trend.
+### Paper #2: Pairs Trading (Gatev, et al.)
+*   **Summary:** Foundational research on relative-value arbitrage. Established the "Distance Method" for identifying cointegrated equity pairs.
+
+### Paper #3: Statistical Arbitrage in the U.S. Equities Market (Avellaneda & Lee)
+*   **Summary:** Detailed the use of Principal Component Analysis (PCA) to extract signals from market noise. 
+
+### Paper #4: Returns to Buying Winners and Selling Losers (Jegadeesh & Titman)
+*   **Summary:** Academic proof of the Momentum anomaly. Found that trend persistence typically lasts between 3 to 12 months.
+
+### Paper #5: A Five-Factor Asset Pricing Model (Fama & French)
+*   **Summary:** Extended the CAPM model to include factors like Size, Value, and Profitability. Essential for multi-factor alpha construction.
+
+### Paper #6: Deep Neural Networks for Stock Price Prediction (Heaton, et al.)
+*   **Summary:** Explored non-linear pattern recognition through deep learning. Potential solution for modeling non-stationary data (Ratio Drift).
+
+### Paper #7: Network Momentum across Asset Classes (Oxford-Man)
+*   **Summary:** Investigated how lead-lag relationships function across connected assets (e.g., NVDA leading AMD). 
+
+### Paper #8: Optimal Execution of Portfolio Transactions (Almgren & Chriss)
+*   **Summary:** Modeled the "Market Impact" of large trades. Essential for understanding the friction between theoretical models and real-world execution.
