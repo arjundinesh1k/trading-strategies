@@ -1,69 +1,72 @@
 # Quantitative Research Log
 
 *   **Researcher:** Arjun Dinesh
-*   **Focus:** Computational Finance
 *   **Grade:** 9 | Phase 1 (Dec 2025)
+*   **Location:** Houston Area, TX
+*   **Focus:** Computational Finance & Statistical Research
 
 ---
 
-## 📈 Active Strategies
+## 🔬 Strategy Methodology & Performance Audits
 
 ### Strategy #1: Statistical Arbitrage (Mean Reversion)
-*   **Assets:** KO (Coke) / PEP (Pepsi)
-*   **Status:** ✅ BACKTESTED & OPTIMIZED
-*   **Performance:** **1.18 Sharpe Ratio** (Z-Score Threshold: 3.0)
-*   **Finding:** Identified that high-frequency "noise" was lowering performance. Moving to a conservative 3.0 threshold improved the quality of trades and strategy robustness.
+*   **Assets:** KO (Coca-Cola) / PEP (PepsiCo)
+*   **Methodology:** Analyzed the price ratio between two cointegrated assets. Used a 30-day rolling mean to establish a baseline and a Z-score to measure price divergence.
+*   **Results:**
+    *   Initial testing at a 2.0 Sigma threshold showed high market noise and a 0.42 Sharpe Ratio.
+    *   Optimized to a **3.0 Sigma threshold**, resulting in a **1.18 Sharpe Ratio**.
+*   **Key Finding:** Higher thresholds improve strategy "robustness" by filtering out insignificant price wiggles and only trading extreme statistical anomalies.
 
-### Strategy #2: Momentum Trend Following
+### Strategy #2: Momentum (Trend Persistence)
 *   **Assets:** NVDA / AMD
-*   **Status:** ✅ BACKTESTED
-*   **Performance:** **0.95 Sharpe Ratio** (74.14% Total Return)
-*   **Risk Note:** Strategy carries a **-47.67% Max Drawdown**. While highly profitable, it requires significant risk tolerance during sector corrections.
+*   **Methodology:** Developed a trend-following model using Exponential Moving Average (EMA) crossovers (9-day vs. 21-day) and an RSI strength filter (> 50).
+*   **Results (NVDA):**
+    *   **Annualized Sharpe Ratio:** 0.95
+    *   **Max Drawdown:** -47.67%
+*   **Key Finding:** Momentum strategies on high-growth equities can produce significant returns (74% in this audit), but carry high "Drawdown" risk—the measure of the largest decline from a peak.
 
 ### Strategy #3: Cross-Asset Lead-Lag
 *   **Assets:** BTC-USD (Lead) / MSTR (Lag)
-*   **Status:** ✅ RESEARCH COMPLETED
-*   **Finding:** Analyzed the "Echo Effect" between Bitcoin and MicroStrategy. Found that at a daily frequency, the correlation (0.6087) is near-instant.
-*   **Conclusion:** No tradable 1-day lag exists, suggesting the market is efficient in pricing the BTC-MSTR relationship.
+*   **Methodology:** Performed a correlation-shift analysis to see if Bitcoin price action predicts MicroStrategy stock moves with a 1-day delay.
+*   **Finding:** The daily correlation of 0.6087 dropped to 0.5671 when Bitcoin was shifted by 1 day.
+*   **Conclusion:** The lead-lag relationship is near-instant at the daily frequency, suggesting the market is efficient and no tradable lag exists for low-frequency investors.
 
 ---
 
 ## 📚 Literature Review (Papers 1-10)
 
 ### Paper #1: What Happened to the Quants in August 2007? (Khandani & Lo)
-*   **Summary:** Analysis of the "Quant Meltdown." Highlights how systemic liquidity shocks can cause simultaneous failures in independent mathematical models.
+*   Analyzed the "Quant Meltdown" where independent mathematical models failed simultaneously due to sudden market-wide selling (Systemic Risk).
 
 ### Paper #2: Pairs Trading (Gatev, et al.)
-*   **Summary:** Foundational research on relative-value arbitrage. Established the "Distance Method" for identifying cointegrated equity pairs.
+*   Established the foundational "Distance Method" for identifying two stocks that move together, proving that relative-value trading can be profitable.
 
 ### Paper #3: Statistical Arbitrage in the U.S. Equities Market (Avellaneda & Lee)
-*   **Summary:** Detailed the use of Principal Component Analysis (PCA) to extract signals from market noise. 
+*   Explored using Principal Component Analysis (PCA) to find trading signals within market data while ignoring random noise.
 
 ### Paper #4: Returns to Buying Winners and Selling Losers (Jegadeesh & Titman)
-*   **Summary:** Academic proof of the Momentum anomaly. Found that trend persistence typically lasts between 3 to 12 months.
+*   The primary academic proof of Momentum; showed that stocks that perform well tend to continue performing well for 3-12 months.
 
 ### Paper #5: A Five-Factor Asset Pricing Model (Fama & French)
-*   **Summary:** Extended the CAPM model to include factors like Size, Value, and Profitability. Essential for multi-factor alpha construction.
+*   Introduced "Factor Investing," proving that stock returns are driven by specific traits like company size, value, and profitability.
 
 ### Paper #6: Deep Neural Networks for Stock Price Prediction (Heaton, et al.)
-*   **Summary:** Explored non-linear pattern recognition through deep learning. Potential solution for modeling non-stationary data (Ratio Drift).
+*   Investigated how AI can find non-linear patterns in price data that traditional linear math might miss.
 
 ### Paper #7: Network Momentum across Asset Classes (Oxford-Man)
-*   **Summary:** Investigated how lead-lag relationships function across connected assets (e.g., NVDA leading AMD). 
+*   Researched how momentum spills over from one asset to another (e.g., how one sector leader influences its competitors).
 
 ### Paper #8: Optimal Execution of Portfolio Transactions (Almgren & Chriss)
-*   **Summary:** Modeled the "Market Impact" of large trades. Essential for understanding the friction between theoretical models and real-world execution.
+*   Modeled "Market Impact"—the reality that large trades change the price of a stock, creating "friction" for the trader.
 
 ### Paper #9: The Lead-Lag Relationship in Crypto Assets (Hou & Moskowitz)
-*   **Summary:** Research on how "Leader" assets (like Bitcoin) influence "Follower" assets (like MSTR). Established that while links exist, information is usually absorbed too fast for low-frequency trading.
+*   Studied the delayed reaction of smaller assets to information already contained in larger, "leading" assets.
 
 ### Paper #10: The Cross-Section of Expected Stock Returns (Fama & French)
-*   **Summary:** Proved that company size and "Value" are the primary drivers of stock returns. This is the foundational paper for all factor-based quantitative research.
+*   The definitive proof that market returns are not random and can be predicted by analyzing company-specific risk factors.
 
 ---
 
-## 🛠 End of Year Audit (Dec 31, 2025)
-*   **Total Papers Read:** 10/10 (Goal Met)
-*   **Strategies Verified:** 3 (Mean Reversion, Momentum, Lead-Lag)
-*   **Python Progress:** Mastered basic data fetching (yfinance) and initial data manipulation (Pandas filtering/slicing).
-*   **Algebra 1 Connections:** Applied concepts of Mean, Standard Deviation, and Slope to financial time-series data.
+## 🛠 End of Year Milestone (Dec 31, 2025)
+*   **Project Status:** Phase 1 (Exploration) completed 2 months ahead of schedule.
+*   **Next Objective:** Transition to Python Mastery and Academic Front-running (AP Physics 1 / Geometry) to maintain 4.0 GPA requirements.

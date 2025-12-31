@@ -17,21 +17,22 @@ This repository serves as a professional portfolio and research log for my journ
 ## 📈 Active Strategies
 
 ### Strategy #1: Statistical Arbitrage (Mean Reversion)
-*   **Assets:** KO (Coca-Cola) / PEP (PepsiCo)
+*   **Assets:** KO (Coke) / PEP (Pepsi)
 *   **Status:** ✅ BACKTESTED & OPTIMIZED
-*   **Performance Metrics (Audit Dec 30, 2025):** 
-    *   **Annualized Sharpe Ratio:** 1.18
-    *   **Threshold:** 3.0 Sigma (Z-Score)
-*   **Research Finding:** Initially achieved a 0.42 Sharpe with a 2.0 threshold. Optimization testing showed a "peak" at 2.45 (1.26 Sharpe), but a **3.0 threshold** was selected for "Robustness." 
-*   **Analysis:** By using a more conservative 3.0 threshold, the strategy filters out market noise and only trades during extreme price divergences. This reduces the risk of **Overfitting**—picking a number that worked perfectly in the past but might fail in the future.
+*   **Performance:** **1.18 Sharpe Ratio** (Z-Score Threshold: 3.0)
+*   **Finding:** Identified that high-frequency "noise" was lowering performance. Moving to a conservative 3.0 threshold improved the quality of trades and strategy robustness.
 
-### Strategy #2: Momentum Trend Following (NVDA/AMD)
-*   **Status:** ✅ BACKTESTED & VERIFIED
-*   **Performance Metrics (Audit Dec 30, 2025):** 
-    *   **NVDA Sharpe Ratio:** 0.95 (High Performance)
-    *   **NVDA Total Return:** 74.14%
-    *   **NVDA Max Drawdown:** -47.67% (Significant Risk)
-*   **Analysis:** The Dual-EMA model excels at capturing the "AI Expansion" trend. However, the high drawdown suggests the need for a "Stop-Loss" mechanism or a volatility-adjusting position size to protect capital during sector rotations.
+### Strategy #2: Momentum Trend Following
+*   **Assets:** NVDA / AMD
+*   **Status:** ✅ BACKTESTED
+*   **Performance:** **0.95 Sharpe Ratio** (74.14% Total Return)
+*   **Risk Note:** Strategy carries a **-47.67% Max Drawdown**. While highly profitable, it requires significant risk tolerance during sector corrections.
+
+### Strategy #3: Cross-Asset Lead-Lag
+*   **Assets:** BTC-USD (Lead) / MSTR (Lag)
+*   **Status:** ✅ RESEARCH COMPLETED
+*   **Finding:** Analyzed the "Echo Effect" between Bitcoin and MicroStrategy. Found that at a daily frequency, the correlation (0.6087) is near-instant.
+*   **Conclusion:** No tradable 1-day lag exists, suggesting the market is efficient in pricing the BTC-MSTR relationship.
 
 ---
 
