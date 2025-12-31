@@ -56,12 +56,8 @@
 ### Paper #8: Optimal Execution of Portfolio Transactions (Almgren & Chriss)
 *   **Summary:** Modeled the "Market Impact" of large trades. Essential for understanding the friction between theoretical models and real-world execution.
 
-### Paper #9: The Lead-Lag Relationship in Crypto Assets
-*   **Authors:** Various (Lead-Lag Methodology)
-*   **Key Takeaway:** Explored how "Primary" assets (like Bitcoin) act as a scout for "Secondary" assets (like Coinbase or MicroStrategy). When the primary asset moves, the secondary asset often follows with a measurable time delay.
-*   **9th Grade Translation (The Scout):** This is about "The Echo." If someone yells across a canyon (Bitcoin price moves), there is a short delay before you hear the echo (MSTR price moves). If you see the person yell, you can predict the echo is coming.
+### Paper #9: The Lead-Lag Relationship in Crypto Assets (Hou & Moskowitz)
+*   **Summary:** Examines the delayed reaction of smaller, "lagging" assets to news already reflected in "leading" primary assets. This confirms that market friction prevents information from being absorbed instantly across all related securities.
 
-### Paper #10: The Cross-Section of Expected Stock Returns
-*   **Authors:** Fama & French (The "Godfathers" of Quant)
-*   **Key Takeaway:** The final proof that market returns are not random. Returns are driven by "Risk Factors" like company size and value-to-price ratios.
-*   **9th Grade Translation (The Archetype):** This ties everything together. It proves that there are "rules" to the game. If you follow the rules (like buying "Cheap" companies or "Winning" companies), you have a mathematical edge over people who are just guessing.
+### Paper #10: The Cross-Section of Expected Stock Returns (Fama & French)
+*   **Summary:** One of the most influential papers in finance. It replaced the single-factor model with a multi-factor approach, proving that company size and book-to-market equity are high-probability predictors of future returns.
