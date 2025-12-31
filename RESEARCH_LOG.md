@@ -6,24 +6,25 @@
 
 ---
 
-## 🔬 Strategy Methodology & Performance Audits
+## 📈 Active Strategies
 
 ### Strategy #1: Statistical Arbitrage (Mean Reversion)
-*   **Methodology:** This strategy identifies price gaps between two related assets (KO and PEP). It uses a 30-day "Rolling Mean" (average) to determine the center point and a "Z-Score" to measure how far the current price has moved from that center.
-*   **Results & Optimization:**
-    *   **Initial Test (2.0 Sigma):** Produced a 0.42 Sharpe Ratio. The model was too sensitive to small price wiggles (market noise).
-    *   **Final Test (3.0 Sigma):** Produced a **1.18 Sharpe Ratio**. By increasing the requirement for a trade, the model only acts on large, significant price gaps.
-*   **Geometry Connection:** The Z-Score functions as a **Distance Formula**. It calculates the numerical distance between the current price and the 30-day average. 
-*   **Physics Connection:** The Sharpe Ratio measures **Signal-to-Noise**. The average profit is the "Signal," and the standard deviation (price volatility) is the "Noise."
+*   **Assets:** KO (Coke) / PEP (Pepsi)
+*   **Status:** ✅ BACKTESTED & OPTIMIZED
+*   **Performance:** **1.18 Sharpe Ratio** (Z-Score Threshold: 3.0)
+*   **Finding:** Identified that high-frequency "noise" was lowering performance. Moving to a conservative 3.0 threshold improved the quality of trades and strategy robustness.
 
-### Strategy #2: Momentum (Trend Persistence)
-*   **Methodology:** This strategy tracks the "winning streak" of high-growth stocks like NVDA. It uses two Exponential Moving Averages (EMA): a 9-day (fast) and a 21-day (slow). 
-*   **Signals:** When the 9-day average moves above the 21-day average, it indicates the price is trending upward. We use the RSI (Relative Strength Index) to confirm the trend is strong (RSI > 50).
-*   **Performance Metrics (NVDA):**
-    *   **Sharpe Ratio:** 0.95
-    *   **Max Drawdown:** -47.67%
-*   **Key Finding:** Momentum is highly profitable (74% return) but carries high "Account Risk." The -47% Drawdown shows the largest peak-to-trough decline, meaning the strategy requires strict exit rules to protect capital.
-*   **Physics Connection:** Modeled price movement as **Velocity** and the EMA crossover as **Acceleration** (the rate at which the price trend is speeding up).
+### Strategy #2: Momentum Trend Following
+*   **Assets:** NVDA / AMD
+*   **Status:** ✅ BACKTESTED
+*   **Performance:** **0.95 Sharpe Ratio** (74.14% Total Return)
+*   **Risk Note:** Strategy carries a **-47.67% Max Drawdown**. While highly profitable, it requires significant risk tolerance during sector corrections.
+
+### Strategy #3: Cross-Asset Lead-Lag
+*   **Assets:** BTC-USD (Lead) / MSTR (Lag)
+*   **Status:** ✅ RESEARCH COMPLETED
+*   **Finding:** Analyzed the "Echo Effect" between Bitcoin and MicroStrategy. Found that at a daily frequency, the correlation (0.6087) is near-instant.
+*   **Conclusion:** No tradable 1-day lag exists, suggesting the market is efficient in pricing the BTC-MSTR relationship.
 
 ---
 
@@ -54,7 +55,15 @@
 *   **Summary:** Modeled the "Market Impact" of large trades. Essential for understanding the friction between theoretical models and real-world execution.
 
 ### Paper #9: The Lead-Lag Relationship in Crypto Assets (Hou & Moskowitz)
-*   **Summary:** Examines the delayed reaction of smaller, "lagging" assets to news already reflected in "leading" primary assets. This confirms that market friction prevents information from being absorbed instantly across all related securities.
+*   **Summary:** Research on how "Leader" assets (like Bitcoin) influence "Follower" assets (like MSTR). Established that while links exist, information is usually absorbed too fast for low-frequency trading.
 
 ### Paper #10: The Cross-Section of Expected Stock Returns (Fama & French)
-*   **Summary:** One of the most influential papers in finance. It replaced the single-factor model with a multi-factor approach, proving that company size and book-to-market equity are high-probability predictors of future returns.
+*   **Summary:** Proved that company size and "Value" are the primary drivers of stock returns. This is the foundational paper for all factor-based quantitative research.
+
+---
+
+## 🛠 End of Year Audit (Dec 31, 2025)
+*   **Total Papers Read:** 10/10 (Goal Met)
+*   **Strategies Verified:** 3 (Mean Reversion, Momentum, Lead-Lag)
+*   **Python Progress:** Mastered basic data fetching (yfinance) and initial data manipulation (Pandas filtering/slicing).
+*   **Algebra 1 Connections:** Applied concepts of Mean, Standard Deviation, and Slope to financial time-series data.
