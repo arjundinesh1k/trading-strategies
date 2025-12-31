@@ -27,7 +27,7 @@
 
 ---
 
-## 📚 Literature Review (Papers 1-8)
+## 📚 Literature Review (Papers 1-10)
 
 ### Paper #1: What Happened to the Quants in August 2007? (Khandani & Lo)
 *   **Summary:** Analysis of the "Quant Meltdown." Highlights how systemic liquidity shocks can cause simultaneous failures in independent mathematical models.
