@@ -1,32 +1,29 @@
-# Quantitative Research & Literature Review
+# Quantitative Research Log
 
 *   **Researcher:** Arjun Dinesh
-*   **Institution:** Fulshear High School
-*   **Focus:** Computational Finance & Statistical Arbitrage
-*   **Timeline:** Grade 9 | Phase 1 (Dec 2025 - Feb 2026)
+*   **Focus:** Computational Finance
+*   **Grade:** 9 | Phase 1 (Dec 2025)
 
 ---
 
-## Phase 1: Optimization & Overfitting Audit (Dec 30, 2025)
+## 🔬 Strategy Methodology & Performance Audits
 
-### Strategy #1: The "Tuning" Process
-*   **Task:** Tested different Z-score thresholds to see which "Rubber Band" stretch produces the best risk-adjusted returns (Sharpe Ratio).
-*   **Results:**
-    *   2.0 Sigma: 0.42 Sharpe (Too much noise)
-    *   2.45 Sigma: 1.26 Sharpe (Possible Overfitting)
-    *   **3.0 Sigma: 1.18 Sharpe (Selected for Robustness)**
-*   **The Lesson (Overfitting):** Learned that the "perfect" number for past data is often a trap. Choosing a round, conservative number like 3.0 is a better engineering choice because it is more likely to handle future market changes.
-*   **Academic Connection:**
-    *   **Geometry:** Realized that changing the Z-score is like changing the **Boundaries** of a shape. A tighter boundary (3.0) means fewer points (trades) qualify, but those that do are more "statistically significant."
+### Strategy #1: Statistical Arbitrage (Mean Reversion)
+*   **Methodology:** This strategy identifies price gaps between two related assets (KO and PEP). It uses a 30-day "Rolling Mean" (average) to determine the center point and a "Z-Score" to measure how far the current price has moved from that center.
+*   **Results & Optimization:**
+    *   **Initial Test (2.0 Sigma):** Produced a 0.42 Sharpe Ratio. The model was too sensitive to small price wiggles (market noise).
+    *   **Final Test (3.0 Sigma):** Produced a **1.18 Sharpe Ratio**. By increasing the requirement for a trade, the model only acts on large, significant price gaps.
+*   **Geometry Connection:** The Z-Score functions as a **Distance Formula**. It calculates the numerical distance between the current price and the 30-day average. 
+*   **Physics Connection:** The Sharpe Ratio measures **Signal-to-Noise**. The average profit is the "Signal," and the standard deviation (price volatility) is the "Noise."
 
-### Strategy #2: Time-Series Momentum (Trend Persistence)
-*   **Methodology:** Developed a dual-factor model utilizing Exponential Moving Average (EMA) crossovers (9/21 day) and Relative Strength Index (RSI) filters (> 50).
-*   **Backtest Metrics (NVDA):**
-    *   **Annualized Sharpe Ratio:** 0.95
+### Strategy #2: Momentum (Trend Persistence)
+*   **Methodology:** This strategy tracks the "winning streak" of high-growth stocks like NVDA. It uses two Exponential Moving Averages (EMA): a 9-day (fast) and a 21-day (slow). 
+*   **Signals:** When the 9-day average moves above the 21-day average, it indicates the price is trending upward. We use the RSI (Relative Strength Index) to confirm the trend is strong (RSI > 50).
+*   **Performance Metrics (NVDA):**
+    *   **Sharpe Ratio:** 0.95
     *   **Max Drawdown:** -47.67%
-*   **Key Finding:** Confirmed high **Trend Persistence** in semiconductor equities. While the Sharpe Ratio is superior to Strategy #1, the significant **Max Drawdown** indicates substantial tail risk, requiring advanced risk management (e.g., stop-losses or volatility scaling).
-*   **Academic Intersection:** 
-    *   **Physics:** Modeled momentum as **Price Velocity** and used EMA crossovers as a proxy for **Acceleration**.
+*   **Key Finding:** Momentum is highly profitable (74% return) but carries high "Account Risk." The -47% Drawdown shows the largest peak-to-trough decline, meaning the strategy requires strict exit rules to protect capital.
+*   **Physics Connection:** Modeled price movement as **Velocity** and the EMA crossover as **Acceleration** (the rate at which the price trend is speeding up).
 
 ---
 
