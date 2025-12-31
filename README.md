@@ -18,14 +18,12 @@ This repository serves as a professional portfolio and research log for my journ
 
 ### Strategy #1: Statistical Arbitrage (Mean Reversion)
 *   **Assets:** KO (Coca-Cola) / PEP (PepsiCo)
-*   **Status:** ✅ VERIFIED & BACKTESTED
-*   **Methodology:** 30-day rolling Z-score model.
-*   **Performance Metrics (Audit Dec 29, 2025):** 
-    *   **Annualized Sharpe Ratio:** 0.42 
-    *   **Win Rate:** 49.18%
-    *   **Daily Standard Deviation:** 0.0062
-*   **Analysis:** The strategy is currently "low-alpha." While profitable, the low win rate is attributed to the long-term "Ratio Drift" (0.34 to 0.48) identified during Phase 1 exploration. 
-*   **Next Steps:** Implement cointegration testing (ADF Test) and optimize entry/exit thresholds to improve the Signal-to-Noise ratio.
+*   **Status:** ✅ BACKTESTED & OPTIMIZED
+*   **Performance Metrics (Audit Dec 30, 2025):** 
+    *   **Annualized Sharpe Ratio:** 1.18
+    *   **Threshold:** 3.0 Sigma (Z-Score)
+*   **Research Finding:** Initially achieved a 0.42 Sharpe with a 2.0 threshold. Optimization testing showed a "peak" at 2.45 (1.26 Sharpe), but a **3.0 threshold** was selected for "Robustness." 
+*   **Analysis:** By using a more conservative 3.0 threshold, the strategy filters out market noise and only trades during extreme price divergences. This reduces the risk of **Overfitting**—picking a number that worked perfectly in the past but might fail in the future.
 
 ### Strategy #2: Momentum Trend Following (NVDA/AMD)
 *   **Status:** ✅ BACKTESTED & VERIFIED

@@ -12,8 +12,8 @@ df['zscore'] = (df['ratio'] - df['mean']) / df['std']
 # If Z < -2, we are 'Long' the ratio (+1)
 # If Z > 2, we are 'Short' the ratio (-1)
 df['position'] = 0
-df.loc[df['zscore'] < -2, 'position'] = 1
-df.loc[df['zscore'] > 2, 'position'] = -1
+df.loc[df['zscore'] < -3, 'position'] = 1
+df.loc[df['zscore'] > 3, 'position'] = -1
 
 # 3. Calculate Returns
 # Daily Return of the ratio

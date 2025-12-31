@@ -7,17 +7,17 @@
 
 ---
 
-## 🔬 Strategy Methodology & Performance Audits
+## Phase 1: Optimization & Overfitting Audit (Dec 30, 2025)
 
-### Strategy #1: Statistical Arbitrage (Pairs Trading)
-*   **Methodology:** Implemented a rolling 30-day Z-Score model to analyze the price ratio between KO and PEP. 
-*   **Backtest Metrics:** 
-    *   **Annualized Sharpe Ratio:** 0.42
-    *   **Win Rate:** 49.18%
-*   **Key Finding (The Drift):** Identified a structural break in the historical price ratio, drifting from 0.34 (2021) to 0.48 (2025). This confirms that price relationships are **non-stationary**, requiring an adaptive rolling-window approach to maintain a tradable signal.
-*   **Academic Intersection:** 
-    *   **Geometry:** Analyzed price divergence as a **Coordinate Distance** problem.
-    *   **Physics:** Evaluated the Sharpe Ratio as a **Signal-to-Noise Ratio (SNR)**; optimizing for higher signal density relative to market volatility.
+### Strategy #1: The "Tuning" Process
+*   **Task:** Tested different Z-score thresholds to see which "Rubber Band" stretch produces the best risk-adjusted returns (Sharpe Ratio).
+*   **Results:**
+    *   2.0 Sigma: 0.42 Sharpe (Too much noise)
+    *   2.45 Sigma: 1.26 Sharpe (Possible Overfitting)
+    *   **3.0 Sigma: 1.18 Sharpe (Selected for Robustness)**
+*   **The Lesson (Overfitting):** Learned that the "perfect" number for past data is often a trap. Choosing a round, conservative number like 3.0 is a better engineering choice because it is more likely to handle future market changes.
+*   **Academic Connection:**
+    *   **Geometry:** Realized that changing the Z-score is like changing the **Boundaries** of a shape. A tighter boundary (3.0) means fewer points (trades) qualify, but those that do are more "statistically significant."
 
 ### Strategy #2: Time-Series Momentum (Trend Persistence)
 *   **Methodology:** Developed a dual-factor model utilizing Exponential Moving Average (EMA) crossovers (9/21 day) and Relative Strength Index (RSI) filters (> 50).
